@@ -1,0 +1,13 @@
+Title	:	Ass1
+Test	:	UnitTest4
+Header	:	4.h
+Source	:	4.cc
+Test_Fixture	:
+    -SetUp	:
+    -TearDown	:
+    -Requirements	:	<int:arr:5:{-1,5,100,2,3}>
+Function	:
+    Min	:	<{-1},{arr,5}>
+    Max	:	<{100},{arr,5}>
+    Average	:	<{21.8},{arr}>
+    Variance	:	<{3},{arr}>
