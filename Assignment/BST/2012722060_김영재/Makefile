@@ -6,7 +6,7 @@ CPPFLAGS += -isystem $(GTEST_DIR)/include
 
 CXXFLAGS += -g -Wall -Wextra -pthread
 
-TESTS = BST_unittest
+TESTS = Death_BSTTest
 
 GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
                 $(GTEST_DIR)/include/gtest/internal/*.h
@@ -21,8 +21,8 @@ Node.o : $(USER_DIR)/Node.cc $(USER_DIR)Node.h $(GTEST_HEADERS)
 BST.o : $(USER_DIR)/BST.cc $(USER_DIR)/BST.h $(USER_DIR)/Node.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/BST.cc
 
-BST_unittest.o : $(USER_DIR)/BST_unittest.cc $(USER_DIR)/BST.h $(USER_DIR)/Node.h  $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/BST_unittest.cc
+Death_BSTTest.o : $(USER_DIR)/Death_BSTTest.cc $(USER_DIR)/BST.h $(USER_DIR)/Node.h  $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/Death_BSTTest.cc
 
-BST_unittest : Node.o BST.o BST_unittest.o ../../../gtest-1.7.0/gtest_main.a
+Death_BSTTest : Node.o BST.o Death_BSTTest.o ../../../gtest-1.7.0/gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@

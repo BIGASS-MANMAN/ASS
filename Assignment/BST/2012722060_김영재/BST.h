@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Node.h"
 #include <signal.h>
 #include <stdlib.h>

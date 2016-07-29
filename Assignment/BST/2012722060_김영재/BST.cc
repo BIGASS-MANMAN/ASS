@@ -38,6 +38,15 @@ char* BST::traversal(Node* pCur, char* arr)
 
 Node* BST::Insert(int value)
 {
+    struct sigaction sa;
+
+    memset(&sa, 0, sizeof(struct sigaction));
+    sigemptyset(&sa.sa_mask);
+    sa.sa_sigaction = segfault_sigaction;
+    sa.sa_flags = SA_SIGINFO;
+
+    sigaction(SIGSEGV, &sa, NULL);
+
     Node* a = new Node;
     Node* pCur = this->pRoot;
 
@@ -80,15 +89,10 @@ Node* BST::Insert(int value)
 void segfault_sigaction(int signal, siginfo_t *si, void *arg)
 {
     cerr<<"segmentation fault";
-    exit(0);
+    exit(-1);
 }
 int BST::Delete(int value)
 {
-    Node* pCur = pRoot;
-    Node* ppCur = '\0';
-    Node* temp = '\0';
-    int data = 0;
-
     struct sigaction sa;
 
     memset(&sa, 0, sizeof(struct sigaction));
@@ -98,11 +102,14 @@ int BST::Delete(int value)
 
     sigaction(SIGSEGV, &sa, NULL);
 
+    Node* pCur = pRoot;
+    Node* ppCur = '\0';
+    Node* temp = '\0';
+    int data = 0;
 
 //    while(1)
-//    {
 //	pCur = pCur->getLeft();
-//   }
+
 
     while(pCur->getValue() != value)
     {

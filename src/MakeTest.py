@@ -6,67 +6,91 @@ Student = sys.argv[2]
 
 rf = open("/usr/local/Auto_Scoring_System/info/"+Ass_name+"/"+Ass_name+"_info.txt")
 lines = rf.readlines()
-lines = list(map(lambda s: s.strip(), lines))
+lines = list(map(lambda s: s.strip('\n'), lines))
 
-TestMatrix = [[0 for col in range(10)] for row in range(30)]
+Class = []
+
 
 i = 0
 for line in lines:
     s = line.split('\t')
-    TestMatrix[i] = s
-    if 'Title' in TestMatrix[i]:
-	Title = TestMatrix[i][2]
-    elif 'Test' in TestMatrix[i]:
-	Test = TestMatrix[i][2]
-    elif 'Header' in TestMatrix[i]:
-	Header = TestMatrix[i][2]
-    elif 'Source' in TestMatrix[i]:
-	Source = TestMatrix[i][2]
-    elif '-Requirements' in TestMatrix[i]:
-	req = TestMatrix[i][2]
-	end = req.find('>')
-	req = req[1:end]
-	req = req.split(':')
-	var_type = req[0]
-	var_name = req[1]
-	var_size = req[2]
-	var_input = req[3]	
-
-    elif 'Function' in TestMatrix[i]:
-	k = i+1
-    else:
-	pass
+    print(s)
+    if 'Title' in line:
+	Title = s[2]
+    elif 'Test' in line:
+	Test = s[2]
+    elif 'Class' in line:
+	for ClassNum in range(2, len(s)):
+	    Class.append(s[ClassNum])
+    elif 'SetUp' in line:
+	i = i + 1
+	break
 
     i = i + 1
 
+SetUp = []
+for j in range(i,len(lines)):
+    if 'Function' in lines[j]:
+	j = j + 1
+	break	   
+    SetUp.append(lines[j])
+    print(SetUp[j-4])
 
+InputRow = 0
 Function = []
-for j in range(0,len(lines)-k):
-    Parameter = TestMatrix[k][2].translate(None, "<>").split('},{')
-    Output = Parameter[0].translate(None,"{}")
-    Input = Parameter[1].translate(None,"{}")
-    Function.append({'Category' : 'Fucntion', 'Name' : TestMatrix[k][0], 'Output' : Output, 'Input' : Input})
+Input = [[0 for col in range(0)] for row in range(10)]
+for k in range(j,len(lines)):
+    temp = lines[k].translate(None, "[]").split('},{')
+    print("%d" %len(temp))
+    if len(temp) == 1:
+	Function.append("")
+	continue
+    print("===============================")
+    print(temp)
+    Fname = temp[0].translate(None,"{")
+    Objname = temp[1]
+    Helper = temp[2]
+    Input_temp = temp[3].split('>,<')
+    print(Input_temp)
+    for InputCol in range(0,len(Input_temp)):
+	Input[InputRow].append(Input_temp[InputCol].translate(None,"<>"))
+	print(Input[InputRow])
 
-    k = k+1
+    Output = temp[4]
+    TestEx = temp[5]
+    InputGRP = temp[6].translate(None,"}")
+    Function.append({'Fname' : Fname, 'Objname' : Objname, 'Helper' : Helper, 'Output' : Output, 'TestEx' : TestEx, 'Input' : Input[InputRow], 'InputGRP' : InputGRP})
+    InputRow = InputRow + 1
 
-print(Title)
-print(Test)
-print(Header)
-print(var_type)
-print(var_name)
-print(var_size)
-print(var_input)
+
 for i in range(0, len(Function)):
     print(Function[i])
 
-wf = open("/usr/local/Auto_Scoring_System/info/"+Ass_name+"/"+Test+".cc",'w')
-wf.write("#include \"/usr/local/Auto_Scoring_System/Assignment/"+Ass_name+"/"+Student+"/"+Header+"\"\n")
-wf.write("#include \"gtest/gtest.h\"\n\n")
-wf.write("class "+Test+" : public testing::Test{\n\tprotected:\n\t\tvirtual void SetUp(){}\n\t\tvirtual void TearDown(){}\n};\n")
-wf.write(var_type +" " +  var_name + "[" + var_size + "] = " + var_input + ";" +"\n\n")
+wf = open("/usr/local/Auto_Scoring_System/Assignment/"+Ass_name+"/"+Student+"/Death_"+Test+".cc",'w')
+for i in range(0, len(Class)):
+    wf.write("#include \"/usr/local/Auto_Scoring_System/Assignment/"+Ass_name+"/"+Student+"/"+Class[i]+".h\"\n")
 
+wf.write("#include \"gtest/gtest.h\"\n\n")
+for i in range(0, len(SetUp)):
+   wf.write(SetUp[i]+"\n")
+
+print("====================\n")
+flag = 0
+FunctionNum = 0
 for i in range(0, len(Function)):
-    wf.write("TEST_F(" +Test+","+Function[i]['Name']+"){EXPECT_EQ("+Function[i]['Output']+","+Function[i]['Name']+"("+Function[i]['Input']+'));}\n')
+    if len(Function[i]) == 0:
+	continue
+	   
+    if Function[i]['Helper'] == 'X':
+	wf.write("TEST_F("+Test+","+Function[i]['Fname']+"_Death_test_"+Function[i]['InputGRP']+"_%d)\n{\n"%FunctionNum)
+	wf.write("\tASSERT_DEATH("+Function[i]['Objname']+"."+Function[i]['Fname']+ "(")
+	for j in range(0, len(Function[i]['Input'])):
+	    wf.write(Function[i]['Input'][j].split(',')[1])
+	    if j == len(Function[i]['Input'])-1:
+		break
+	    wf.write(",")
+	wf.write("),\"segmentation fault\");\n}\n")
+	FunctionNum = FunctionNum + 1
 
 
 rf.close()

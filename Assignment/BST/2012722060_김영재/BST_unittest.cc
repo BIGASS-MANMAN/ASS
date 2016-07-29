@@ -89,6 +89,13 @@ class BSTTest : public testing::Test {
   BST Tree3;
 };
 
+TEST_F(BSTTest,Delete_Death_test)
+{
+    //ASSERT_DEATH({Tree1.Delete(10);},"segmentation fault");
+    ASSERT_DEATH(Tree1.Delete(10),"");
+}
+
+
 
 TEST_F(BSTTest, Insert) {
   EXPECT_STREQ(PRINTNODE(Tree1),"5101315");
@@ -96,24 +103,18 @@ TEST_F(BSTTest, Insert) {
   EXPECT_STREQ(PRINTNODE(Tree3),"2024272835");
 }
 
-TEST_F(BSTTest,Delete_Death_test)
-{   
-        ASSERT_DEATH({Tree1.Delete(10);},"[  DEATH   ] segmentation fault");
-} 
-
-
 
 
 // Tests Delete().
 TEST_F(BSTTest, Delete) {
  //   EXPECT_STREQ(Tree1.traversal(Tree1.getRoot(),arr),"51013");
-//    Tree1.Delete(10);
+    Tree1.Delete(10);
     EXPECT_STREQ(PRINTNODE(Tree1),"51315");
 
-//    Tree2.Delete(20);
+    Tree2.Delete(20);
     EXPECT_STREQ(PRINTNODE(Tree2),"510");
 
-//    Tree3.Delete(27);
+    Tree3.Delete(27);
     EXPECT_STREQ(PRINTNODE(Tree3),"20242835");
 //    Tree3.Delete(28);
 //    EXPECT_STREQ(PRINTNODE(Tree3),"202435");
