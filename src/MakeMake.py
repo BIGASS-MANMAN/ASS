@@ -41,3 +41,4 @@ wf.write(Test+".o ../../../gtest-1.7.0/gtest_main.a\n\t$(CXX) $(CPPFLAGS) $(CXXF
 
 rf.close()
 wf.close()
+

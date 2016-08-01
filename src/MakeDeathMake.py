@@ -4,6 +4,7 @@ import sys
 Ass_name = sys.argv[1]
 Student = sys.argv[2]
 
+print("Make Death test Makefile......\n")
 rf = open("/usr/local/Auto_Scoring_System/info/"+Ass_name+"/"+Ass_name+"_info.txt")
 lines = rf.readlines()
 lines = list(map(lambda s: s.strip('\n'), lines))

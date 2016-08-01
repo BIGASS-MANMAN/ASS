@@ -13,6 +13,8 @@ def IsFail(Func, FL):
 Ass_name = sys.argv[1]
 Student = sys.argv[2]
 
+
+print("Make Unittest Code......\n")
 rf = open("/usr/local/Auto_Scoring_System/info/"+Ass_name+"/"+Ass_name+"_info.txt")
 fl = open("/usr/local/Auto_Scoring_System/info/"+Ass_name+"/"+Ass_name+"_Death_Function.txt")
 

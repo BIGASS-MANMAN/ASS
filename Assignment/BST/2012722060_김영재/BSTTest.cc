@@ -1,7 +1,7 @@
-Title	=	BST
-Test	=	BSTTest
-Class	=	Node	BST
-SetUp	=	
+#include "/usr/local/Auto_Scoring_System/Assignment/BST/2012722060_김영재/Node.h"
+#include "/usr/local/Auto_Scoring_System/Assignment/BST/2012722060_김영재/BST.h"
+#include "gtest/gtest.h"
+
 class BSTTest : public testing::Test {
     protected:
 	virtual void SetUp() {
@@ -87,13 +87,11 @@ class BSTTest : public testing::Test {
 	BST Tree2;
 	BST Tree3;
 };
-Function	=	
-[{Insert},{Tree1},{X},{<number,100>},{X},{X},{GRP1}]
-[{Insert},{Tree1},{PRINTNODE},{{BST,Tree1}},{string,"5101315100"},{O},{GRP1}]
-
-[{Delete},{Tree1},{X},{<number,10>},{X},{X},{GRP2}]
-[{Delete},{Tree1},{PRINTNODE},{<BST,Tree1>},{string,"51315"},{O},{GRP2}]
-[{Delete},{Tree2},{X},{<number,20>},{X},{X},{GRP2}]
-[{Delete},{Tree2},{PRINTNODE},{<BST,Tree1>},{string,"510"},{O},{GRP2}]
-[{Delete},{Tree3},{X},{<number,27>},{X},{X},{GRP2}]
-[{Delete},{Tree3},{PRINTNODE},{<BST,Tree1>},{string,"20242835"},{O},{GRP2}]
+TEST_F(BSTTest,Delete){
+	Tree1.Delete(10);
+	EXPECT_STREQ(PRINTNODE(Tree1),"51315");
+	Tree2.Delete(20);
+	EXPECT_STREQ(PRINTNODE(Tree1),"510");
+	Tree3.Delete(27);
+	EXPECT_STREQ(PRINTNODE(Tree1),"20242835");
+}
