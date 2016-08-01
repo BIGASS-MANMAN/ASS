@@ -1,2 +1,1 @@
 Insert	GRP1
-Delete	GRP2
