@@ -57,8 +57,6 @@ for k in range(j,len(lines)):
     InputRow = InputRow + 1
 
 
-for i in range(0, len(Function)):
-
 wf = open("/usr/local/Auto_Scoring_System/Assignment/"+Ass_name+"/"+Student+"/Death_"+Test+".cc",'w')
 for i in range(0, len(Class)):
     wf.write("#include \"/usr/local/Auto_Scoring_System/Assignment/"+Ass_name+"/"+Student+"/"+Class[i]+".h\"\n")

@@ -88,8 +88,16 @@ Node* BST::Insert(int value)
 
 void segfault_sigaction(int signal, siginfo_t *si, void *arg)
 {
-    cerr<<"segmentation fault";
-    exit(-1);
+    if(signal == SIGSEGV)
+    {
+	cerr<<"segmentation fault";
+	exit(-1);
+    }
+    else if(signal == SIGALRM)
+    {
+	cerr<<"infinite loop";
+	exit(-1);
+    }
 }
 int BST::Delete(int value)
 {
@@ -101,14 +109,13 @@ int BST::Delete(int value)
     sa.sa_flags = SA_SIGINFO;
 
     sigaction(SIGSEGV, &sa, NULL);
+    sigaction(SIGALRM, &sa, NULL);
+    alarm(5);
 
     Node* pCur = pRoot;
     Node* ppCur = '\0';
     Node* temp = '\0';
     int data = 0;
-
-//    while(1)
-//	pCur = pCur->getLeft();
 
 
     while(pCur->getValue() != value)

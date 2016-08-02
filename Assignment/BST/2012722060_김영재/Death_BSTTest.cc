@@ -93,7 +93,7 @@ TEST_F(BSTTest,Insert_Death_test_GRP1_0)
 }
 TEST_F(BSTTest,Delete_Death_test_GRP2_0)
 {
-	ASSERT_DEATH(Tree1.Delete(10),"segmentation fault");
+	ASSERT_DEATH(Tree1.Delete(100),"segmentation fault");
 }
 TEST_F(BSTTest,Delete_Death_test_GRP2_1)
 {
