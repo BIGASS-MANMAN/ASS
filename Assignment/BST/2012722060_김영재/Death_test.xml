@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="4" failures="3" disabled="0" errors="0" timestamp="2016-08-02T13:24:29" time="0.003" name="AllTests">
-  <testsuite name="BSTTest" tests="4" failures="3" disabled="0" errors="0" time="0.003">
+<testsuites tests="5" failures="5" disabled="0" errors="0" timestamp="2016-08-05T13:31:31" time="20.008" name="AllTests">
+  <testsuite name="BSTTest" tests="5" failures="5" disabled="0" errors="0" time="20.008">
     <testcase name="Insert_Death_test_GRP1_0" status="run" time="0.001" classname="BSTTest">
       <failure message=".//Death_BSTTest.cc:92&#x0A;Death test: Tree1.Insert(100)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_BSTTest.cc:92
 Death test: Tree1.Insert(100)
@@ -8,20 +8,37 @@ Death test: Tree1.Insert(100)
  Error msg:
 [  DEATH   ] ]]></failure>
     </testcase>
-    <testcase name="Delete_Death_test_GRP2_0" status="run" time="0.001" classname="BSTTest" />
-    <testcase name="Delete_Death_test_GRP2_1" status="run" time="0.001" classname="BSTTest">
-      <failure message=".//Death_BSTTest.cc:100&#x0A;Death test: Tree2.Delete(20)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_BSTTest.cc:100
-Death test: Tree2.Delete(20)
-    Result: failed to die.
- Error msg:
-[  DEATH   ] ]]></failure>
+    <testcase name="Delete_Death_test_Infinite_0" status="run" time="5.001" classname="BSTTest">
+      <failure message=".//Death_BSTTest.cc:96&#x0A;Death test: Tree1.Delete(10)&#x0A;    Result: died but not with expected error.&#x0A;  Expected: segmentation fault&#x0A;Actual msg:&#x0A;[  DEATH   ] infinite loop" type=""><![CDATA[.//Death_BSTTest.cc:96
+Death test: Tree1.Delete(10)
+    Result: died but not with expected error.
+  Expected: segmentation fault
+Actual msg:
+[  DEATH   ] infinite loop]]></failure>
     </testcase>
-    <testcase name="Delete_Death_test_GRP2_2" status="run" time="0" classname="BSTTest">
-      <failure message=".//Death_BSTTest.cc:104&#x0A;Death test: Tree3.Delete(27)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_BSTTest.cc:104
+    <testcase name="Delete_Death_test_GRP2_0" status="run" time="5.001" classname="BSTTest">
+      <failure message=".//Death_BSTTest.cc:100&#x0A;Death test: Tree1.Delete(10)&#x0A;    Result: died but not with expected error.&#x0A;  Expected: segmentation fault&#x0A;Actual msg:&#x0A;[  DEATH   ] infinite loop" type=""><![CDATA[.//Death_BSTTest.cc:100
+Death test: Tree1.Delete(10)
+    Result: died but not with expected error.
+  Expected: segmentation fault
+Actual msg:
+[  DEATH   ] infinite loop]]></failure>
+    </testcase>
+    <testcase name="Delete_Death_test_GRP2_1" status="run" time="5.003" classname="BSTTest">
+      <failure message=".//Death_BSTTest.cc:104&#x0A;Death test: Tree2.Delete(20)&#x0A;    Result: died but not with expected error.&#x0A;  Expected: segmentation fault&#x0A;Actual msg:&#x0A;[  DEATH   ] infinite loop" type=""><![CDATA[.//Death_BSTTest.cc:104
+Death test: Tree2.Delete(20)
+    Result: died but not with expected error.
+  Expected: segmentation fault
+Actual msg:
+[  DEATH   ] infinite loop]]></failure>
+    </testcase>
+    <testcase name="Delete_Death_test_GRP2_2" status="run" time="5.002" classname="BSTTest">
+      <failure message=".//Death_BSTTest.cc:108&#x0A;Death test: Tree3.Delete(27)&#x0A;    Result: died but not with expected error.&#x0A;  Expected: segmentation fault&#x0A;Actual msg:&#x0A;[  DEATH   ] infinite loop" type=""><![CDATA[.//Death_BSTTest.cc:108
 Death test: Tree3.Delete(27)
-    Result: failed to die.
- Error msg:
-[  DEATH   ] ]]></failure>
+    Result: died but not with expected error.
+  Expected: segmentation fault
+Actual msg:
+[  DEATH   ] infinite loop]]></failure>
     </testcase>
   </testsuite>
 </testsuites>
