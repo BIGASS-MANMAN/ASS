@@ -89,9 +89,12 @@ class BSTTest : public testing::Test {
 };
 Function	=	
 [{Insert},{Tree1},{X},{<number,100>},{X},{X},{GRP1}]
-[{Insert},{Tree1},{PRINTNODE},{{BST,Tree1}},{string,"5101315100"},{O},{GRP1}]
+[{Insert},{Tree1},{PRINTNODE},{<BST,Tree1>},{string,"5101315100"},{O},{GRP1}]
 
-[{Delete},{Tree1},{X},{<number,100>},{X},{X},{GRP2}]
+[{Delete},{Tree1},{X},{<number,10>},{X},{X},{Infinite}]
+[{Delete},{Tree1},{PRINTNODE},{<BST,Tree1>},{string,"51315"},{O},{infinite}]
+
+[{Delete},{Tree1},{X},{<number,10>},{X},{X},{GRP2}]
 [{Delete},{Tree1},{PRINTNODE},{<BST,Tree1>},{string,"51315"},{O},{GRP2}]
 [{Delete},{Tree2},{X},{<number,20>},{X},{X},{GRP2}]
 [{Delete},{Tree2},{PRINTNODE},{<BST,Tree2>},{string,"510"},{O},{GRP2}]

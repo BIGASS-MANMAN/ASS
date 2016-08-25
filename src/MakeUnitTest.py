@@ -1,6 +1,7 @@
 #Open assignmnet information file
 import sys
 
+#Decide current function didn't occur error(segmentation fault, infinite loop...)
 def IsFail(Func, FL):
     for i in range(0, len(FL)):
 	if Func['Fname'] == FL[i][0] and Func['InputGRP'] == FL[i][1]:
@@ -18,9 +19,11 @@ print("Make Unittest Code......\n")
 rf = open("/usr/local/Auto_Scoring_System/info/"+Ass_name+"/"+Ass_name+"_info.txt")
 fl = open("/usr/local/Auto_Scoring_System/info/"+Ass_name+"/"+Ass_name+"_Death_Function.txt")
 
+#Call up Failed function list from "ASS_name"_Death_Function.txt
 Fails = fl.readlines()
 Fails = list(map(lambda s: s.strip('\n'), Fails))
 
+#Fail[0] : Function name    /	Fail[1] : Function test input group
 FailList = []
 for Fail in Fails:
     f = Fail.split('\t')
@@ -58,7 +61,7 @@ for j in range(i,len(lines)):
 
 InputRow = 0
 Function = []
-Input = [[0 for col in range(0)] for row in range(10)]
+Input = [[0 for col in range(0)] for row in range(100)]
 for k in range(j,len(lines)):
     temp = lines[k].translate(None, "[]").split('},{')
     if len(temp) == 1:
@@ -90,12 +93,6 @@ for i in range(0, len(SetUp)):
 flag = 0
 FunctionNum = 0
 
-#for i in range(0, len(Function)):
-#    print(Function[i])
-
-#for i in range(0, len(FailList)):
-#    print(FailList[i])
-
 FFlag = 0
 for i in range(0, len(Function)):
     if len(Function[i]) == 0:
@@ -109,7 +106,7 @@ for i in range(0, len(Function)):
 
     FFlag = 1
     if flag == 0:
-	wf.write("TEST_F("+Test+","+Function[i]['Fname']+"){\n")
+	wf.write("TEST_F("+Test+","+Function[i]['Fname']+"_"+Function[i]['InputGRP']+"){\n")
 
     flag = 1
 

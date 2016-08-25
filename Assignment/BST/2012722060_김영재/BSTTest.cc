@@ -87,8 +87,16 @@ class BSTTest : public testing::Test {
 	BST Tree2;
 	BST Tree3;
 };
-TEST_F(BSTTest,Delete){
-	Tree1.Delete(100);
+TEST_F(BSTTest,Insert_GRP1){
+	Tree1.Insert(100);
+	EXPECT_STREQ(PRINTNODE(Tree1),"5101315100");
+}
+TEST_F(BSTTest,Delete_Infinite){
+	Tree1.Delete(10);
+	EXPECT_STREQ(PRINTNODE(Tree1),"51315");
+}
+TEST_F(BSTTest,Delete_GRP2){
+	Tree1.Delete(10);
 	EXPECT_STREQ(PRINTNODE(Tree1),"51315");
 	Tree2.Delete(20);
 	EXPECT_STREQ(PRINTNODE(Tree2),"510");

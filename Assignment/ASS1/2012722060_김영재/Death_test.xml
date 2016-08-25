@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="4" disabled="0" errors="0" timestamp="2016-08-24T15:28:31" time="0.019" name="AllTests">
+  <testsuite name="ASS1Test" tests="4" failures="4" disabled="0" errors="0" time="0.018">
+    <testcase name="LOAD_Death_test_Scenario1_0" status="run" time="0.004" classname="ASS1Test">
+      <failure message=".//Death_ASS1Test.cc:98&#x0A;Death test: M1.LOAD(&quot;words.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_ASS1Test.cc:98
+Death test: M1.LOAD("words.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="COMMAND_Death_test_Scenario1_0" status="run" time="0.003" classname="ASS1Test">
+      <failure message=".//Death_ASS1Test.cc:102&#x0A;Death test: M1.COMMAND(&quot;/usr/local/Auto_Scoring_System/ASS1/2012722060_/Scenario1.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_ASS1Test.cc:102
+Death test: M1.COMMAND("/usr/local/Auto_Scoring_System/ASS1/2012722060_/Scenario1.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="COMMAND_Death_test_Scenario2_0" status="run" time="0.005" classname="ASS1Test">
+      <failure message=".//Death_ASS1Test.cc:106&#x0A;Death test: M2.COMMAND(&quot;Scenario2.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_ASS1Test.cc:106
+Death test: M2.COMMAND("Scenario2.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="COMMAND_Death_test_Scenario3_0" status="run" time="0.005" classname="ASS1Test">
+      <failure message=".//Death_ASS1Test.cc:110&#x0A;Death test: M3.COMMAND(&quot;Scenario3.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_ASS1Test.cc:110
+Death test: M3.COMMAND("Scenario3.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

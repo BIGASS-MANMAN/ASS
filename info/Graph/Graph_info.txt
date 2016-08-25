@@ -1,0 +1,35 @@
+Title	=	Graph
+Test	=	GraphTest
+Class	=	LeftistTree	Manager	dijkstra	edge	graph	node	request
+SetUp	=	
+class GraphTest : public testing::Test {
+    protected:
+	virtual void SetUp() {
+	    manager.ProcessRoute("route.in");
+	}
+
+	char* Graph_traversal(Manager M)
+	{
+	    char arr[1024]={0,};
+	    node* nodeCur = M.getGraphRoot();
+	    edge* edgeCur = '\0';
+	    int index = 0;
+	    while(nodeCur != '\0')
+	    {
+		edgeCur = nodeCur->getEdge();
+		while(edgeCur != '\0')
+		{
+		    arr[index++] = edgeCur->getFrom()->getID();
+		    arr[index++] = edgeCur->getTo()->getID();
+		    edgeCur = edgeCur->getNext();
+		}
+		nodeCur = nodeCur->getNext();
+	    }
+	    cout<<arr<<endl;
+	    return arr;
+	}
+
+	Manager manager;
+};
+Function	=	
+[{ProcessRoute},{manager},{Graph_traversal},{<Manager,manager>},{string,"ABCDEF"},{O},{GRP1}]

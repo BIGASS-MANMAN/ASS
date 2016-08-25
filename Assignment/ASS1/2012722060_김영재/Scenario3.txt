@@ -1,0 +1,4 @@
+LOAD words.txt
+MEMORIZE job 직업
+MEMORIZE life 인생
+SAVE

@@ -1,0 +1,188 @@
+	------------------------make shortest path----------------------------
+	IE	F	H	A	
+	IE	F	D	C	B	
+	IE	F	D	C	
+	IE	F	H	
+	IE	F	D	
+	IE	F	
+	IE	F	G	
+	---------------------------end print SP-------------------------------
+allocated Request	: 1	60	E	F	H	A
+
+
+	------------------------make shortest path----------------------------
+	IA	B	
+	IA	C	
+	IA	H	
+	IA	C	D	
+	IA	H	F	E	
+	IA	H	F	
+	IA	H	G	
+	---------------------------end print SP-------------------------------
+allocated Request	: 2	90	A	H	G
+
+
+	------------------------make shortest path----------------------------
+	IB	A	
+	IB	C	
+	IB	A	H	
+	IB	C	D	
+	IB	C	D	F	E	
+	IB	C	D	F	
+	IB	A	H	G	
+	---------------------------end print SP-------------------------------
+allocated Request	: 3	70	B	C	D	F
+
+
+	------------------------make shortest path----------------------------
+	ID	C	A	
+	ID	C	B	
+	ID	C	
+	ID	F	H	
+	ID	F	E	
+	ID	F	
+	ID	F	G	
+	---------------------------end print SP-------------------------------
+allocated Request	: 4	80	D	F	G
+
+
+linkfail D F
+----------------------------------start return bw------------------------------
+using faillink path	: 3	70	B	C	D	F
+using faillink path	: 4	80	D	F	G
+-----------------------------------end return bw-------------------------------
+-----------------------------------start realloc-------------------------------
+	------------------------make shortest path----------------------------
+	IA	A	
+	IF	H	C	
+	IF	H	
+	ID	
+	IE	
+	IF	
+	IG	
+	---------------------------end print SP-------------------------------
+deferred Request	: 3	70	B	A	H	F
+	------------------------make shortest path----------------------------
+	IA	
+	IE	B	
+	IF	C	
+	IG	H	
+	IE	
+	IF	
+	IG	
+	---------------------------end print SP-------------------------------
+allocated Request	: 4	80	D	E	F	G
+
+------------------------------------end realloc--------------------------------
+
+	------------------------make shortest path----------------------------
+	IH	A	
+	IH	A	B	
+	IH	A	C	
+	IH	A	C	D	
+	IH	F	E	
+	IH	F	
+	IH	G	
+	---------------------------end print SP-------------------------------
+allocated Request	: 5	50	H	A	C
+
+
+	------------------------make shortest path----------------------------
+	IC	A	
+	IC	B	
+	IC	A	H	
+	IC	D	
+	IC	D	E	
+	IC	D	E	F	
+	IC	A	H	G	
+	---------------------------end print SP-------------------------------
+allocated Request	: 6	120	C	D	E	F
+
+
+eos 1
+-----------------------------------start realloc-------------------------------
+deferred Request	: 3	70	B	A	H	F
+------------------------------------end realloc--------------------------------
+
+	------------------------make shortest path----------------------------
+	IB	A	
+	IB	C	
+	IB	A	H	
+	IB	C	D	
+	IB	C	D	E	
+	IB	A	H	F	
+	IB	A	H	G	
+	---------------------------end print SP-------------------------------
+allocated Request	: 7	40	B	A	H	G
+
+
+linkfail A H
+----------------------------------start return bw------------------------------
+using faillink path	: 2	90	A	H	G
+using faillink path	: 7	40	B	A	H	G
+-----------------------------------end return bw-------------------------------
+-----------------------------------start realloc-------------------------------
+	------------------------make shortest path----------------------------
+	IA	
+	IE	B	
+	IF	C	
+	IG	H	
+	IE	
+	IF	
+	IG	
+	---------------------------end print SP-------------------------------
+allocated Request	: 4	80	D	E	F	G
+	------------------------make shortest path----------------------------
+	IH	B	
+	IG	C	
+	IH	
+	ID	
+	IE	
+	IF	
+	IG	
+	---------------------------end print SP-------------------------------
+allocated Request	: 2	90	A	H	G
+	------------------------make shortest path----------------------------
+	IC	A	
+	IF	D	C	
+	IG	E	H	
+	IF	D	
+	IG	E	
+	IF	
+	IG	
+	---------------------------end print SP-------------------------------
+allocated Request	: 7	40	B	C	D	E	F	G
+
+------------------------------------end realloc--------------------------------
+
+	------------------------make shortest path----------------------------
+	IH	A	
+	IH	A	B	
+	IH	A	C	
+	IH	A	C	D	
+	IH	A	C	D	E	
+	IH	F	
+	IH	G	
+	---------------------------end print SP-------------------------------
+allocated Request	: 8	100	H	F
+
+
+eos 6
+-----------------------------------start realloc-------------------------------
+	------------------------make shortest path----------------------------
+	IA	A	
+	IF	H	C	
+	IF	H	
+	ID	
+	IE	
+	IF	
+	IG	
+	---------------------------end print SP-------------------------------
+allocated Request	: 3	70	B	A	H	F
+deferred Request	: 3	70	B	A	H	F
+------------------------------------end realloc--------------------------------
+
+eos 8
+-----------------------------------start realloc-------------------------------
+------------------------------------end realloc--------------------------------
+

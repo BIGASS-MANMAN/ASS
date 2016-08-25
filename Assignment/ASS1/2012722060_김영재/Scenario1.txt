@@ -1,0 +1,1 @@
+LOAD words1.txt

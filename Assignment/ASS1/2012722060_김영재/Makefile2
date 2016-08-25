@@ -1,0 +1,10 @@
+SURC = ALP_BST.h ALP_BST.cc Alphabet.h Alphabet.cc CircularQueue.h CircularQueue.cc Manager.h Manager.cc Queue.h Queue.cc WORD_BST.h WORD_BST.cc Word.h word.cc
+EXEC = ASS1
+CC = g++
+all: $(SURC)
+	$(CC) -o $(EXEC) $^
+	clean:
+	    rm -rf $(EXEC)
+	rm -rf *.bak
+	    rm -rf *~
+

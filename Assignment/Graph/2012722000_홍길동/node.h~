@@ -1,0 +1,31 @@
+#pragma once
+#include <iostream>
+#include <string.h>
+#include <string>
+#include <cstring>
+#include <stdio.h>
+#include <stdlib.h>
+#include "edge.h"
+
+
+using namespace std;
+
+class node
+{
+private:
+	char ID;
+	int index;
+	node* pNext;
+	edge* pEdge;
+public:
+	node();
+	void setID(char id);
+	void setIndex(int Index);
+	void setNext(node* Next);
+	void setEdge(edge* Edge);
+
+	char getID();
+	int getIndex();
+	node* getNext();
+	edge* getEdge();
+};

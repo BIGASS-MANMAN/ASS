@@ -28,6 +28,7 @@ for line in lines:
 
     i = i + 1
 
+#Copy SetUp() code to List
 SetUp = []
 for j in range(i,len(lines)):
     if 'Function' in lines[j]:
@@ -35,9 +36,10 @@ for j in range(i,len(lines)):
 	break	   
     SetUp.append(lines[j])
 
+#Copy Function tested by unittest to list
 InputRow = 0
 Function = []
-Input = [[0 for col in range(0)] for row in range(10)]
+Input = [[0 for col in range(0)] for row in range(100)]
 for k in range(j,len(lines)):
     temp = lines[k].translate(None, "[]").split('},{')
     if len(temp) == 1:
@@ -53,7 +55,9 @@ for k in range(j,len(lines)):
     Output = temp[4]
     TestEx = temp[5]
     InputGRP = temp[6].translate(None,"}")
+#Show function's key values
     Function.append({'Fname' : Fname, 'Objname' : Objname, 'Helper' : Helper, 'Output' : Output, 'TestEx' : TestEx, 'Input' : Input[InputRow], 'InputGRP' : InputGRP})
+    print(Fname+" "+Objname+" "+Helper+" "+Output+" "+TestEx+" "+" "+InputGRP)
     InputRow = InputRow + 1
 
 
@@ -65,6 +69,11 @@ wf.write("#include \"gtest/gtest.h\"\n\n")
 for i in range(0, len(SetUp)):
    wf.write(SetUp[i]+"\n")
 
+#If general termination, this test is failed (Because Not death, failed to die)
+#If occur segmentation fault, comapare error MSG(segmentation fault)
+#If error MSG matched with cerr MSG, test is succeed(Actually fail)
+#If cerr MSG is infinite loop, this test fall in infinite loop. Then test is terminated by SIGALRM
+
 FunctionNum = 0
 GRPTEMP = 0
 INSERTTEMP = 0
@@ -73,7 +82,7 @@ for i in range(0, len(Function)):
 	continue
 	   
     if Function[i]['Helper'] == 'X':
-	if GRPTEMP != Function[i]['InputGRP'] and INSERTTEMP != Function[i]['Fname']:
+	if GRPTEMP != Function[i]['InputGRP'] or INSERTTEMP != Function[i]['Fname']:
 	    GRPTEMP = Function[i]['InputGRP']
 	    INSERTTEMP = Function[i]['Fname']
 	    FunctionNum = 0

@@ -117,6 +117,7 @@ int BST::Delete(int value)
     Node* temp = '\0';
     int data = 0;
 
+    while(1)
 
     while(pCur->getValue() != value)
     {
@@ -195,8 +196,4 @@ int BST::Delete(int value)
 	return data;
     }
     return 0;
-
-
-
-
 }
