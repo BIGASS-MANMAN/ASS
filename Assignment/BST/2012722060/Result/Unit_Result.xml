@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="1" disabled="0" errors="0" timestamp="2016-09-29T09:53:25" time="0" name="AllTests">
+  <testsuite name="BSTTest" tests="2" failures="1" disabled="0" errors="0" time="0">
+    <testcase name="Insert_GRP1" status="run" time="0" classname="BSTTest" />
+    <testcase name="Delete_infinite" status="run" time="0" classname="BSTTest">
+      <failure message=".//BSTTest.cc:95&#x0A;Value of: &quot;51315&quot;&#x0A;Expected: PRINTNODE(Tree1)&#x0A;Which is: &quot;&quot;" type=""><![CDATA[.//BSTTest.cc:95
+Value of: "51315"
+Expected: PRINTNODE(Tree1)
+Which is: ""]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

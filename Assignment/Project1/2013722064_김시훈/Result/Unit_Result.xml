@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="14" failures="0" disabled="0" errors="0" timestamp="2016-10-07T20:59:53" time="0.019" name="AllTests">
+  <testsuite name="Project1Test" tests="14" failures="0" disabled="0" errors="0" time="0.019">
+    <testcase name="run_TestCase1" status="run" time="0" classname="Project1Test" />
+    <testcase name="run_TestCase2" status="run" time="0.002" classname="Project1Test" />
+    <testcase name="run_TestCase3" status="run" time="0.001" classname="Project1Test" />
+    <testcase name="run_TestCase4" status="run" time="0.002" classname="Project1Test" />
+    <testcase name="run_TestCase5" status="run" time="0.003" classname="Project1Test" />
+    <testcase name="run_TestCase6" status="run" time="0.002" classname="Project1Test" />
+    <testcase name="run_TestCase7" status="run" time="0.001" classname="Project1Test" />
+    <testcase name="run_TestCase8" status="run" time="0.001" classname="Project1Test" />
+    <testcase name="run_TestCase9" status="run" time="0.002" classname="Project1Test" />
+    <testcase name="run_TestCase10" status="run" time="0.001" classname="Project1Test" />
+    <testcase name="run_TestCase11" status="run" time="0" classname="Project1Test" />
+    <testcase name="run_TestCase12" status="run" time="0.002" classname="Project1Test" />
+    <testcase name="run_TestCase13" status="run" time="0.001" classname="Project1Test" />
+    <testcase name="run_TestCase14" status="run" time="0.001" classname="Project1Test" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,2 @@
+run	TestCase5	segmentation fault	1
+run	TestCase14	segmentation fault	1

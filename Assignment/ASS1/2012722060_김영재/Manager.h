@@ -21,7 +21,7 @@ class Manager
 
     public:
 	Manager();
-
+	~Manager();
 	Queue* Q;
 	CircularQueue* CQ;
 	ALP_BST* ALPTREE;

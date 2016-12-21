@@ -17,7 +17,7 @@ Student = sys.argv[2]
 
 print("Make Unittest Code......\n")
 rf = open("/usr/local/Auto_Scoring_System/info/"+Ass_name+"/"+Ass_name+"_info.txt")
-fl = open("/usr/local/Auto_Scoring_System/info/"+Ass_name+"/"+Ass_name+"_Death_Function.txt")
+fl = open("/usr/local/Auto_Scoring_System/Assignment/"+Ass_name+"/"+Student+"/Result/Report.txt")
 
 #Call up Failed function list from "ASS_name"_Death_Function.txt
 Fails = fl.readlines()
@@ -85,7 +85,7 @@ for k in range(j,len(lines)):
 wf = open("/usr/local/Auto_Scoring_System/Assignment/"+Ass_name+"/"+Student+"/"+Test+".cc",'w')
 for i in range(0, len(Class)):
     wf.write("#include \"/usr/local/Auto_Scoring_System/Assignment/"+Ass_name+"/"+Student+"/"+Class[i]+".h\"\n")
-
+wf.write("#include \"../../src/signal.h\"\n");
 wf.write("#include \"gtest/gtest.h\"\n\n")
 for i in range(0, len(SetUp)):
    wf.write(SetUp[i]+"\n")
@@ -98,6 +98,7 @@ for i in range(0, len(Function)):
     if len(Function[i]) == 0:
 	if FFlag == 1:
 	    wf.write("}\n")
+            FFlag = 0
 	flag = 0
 	continue
 
@@ -111,7 +112,7 @@ for i in range(0, len(Function)):
     flag = 1
 
     if Function[i]['TestEx'] == 'X':
-	wf.write("\t"+Function[i]['Objname']+"."+Function[i]['Fname']+"(")
+	wf.write("\t"+Function[i]['Objname']+"->"+Function[i]['Fname']+"(")
 	for j in range(0, len(Function[i]['Input'])):
 	    wf.write(Function[i]['Input'][j].split(',')[1])
 	    if j == len(Function[i]['Input'])-1:
@@ -122,9 +123,9 @@ for i in range(0, len(Function)):
     else:
 	if Function[i]['Helper'] == 'X':
 	    if Function[i]['Output'][0] == number:
-		wf.write("\tEXPECT_EQ("+Fucntion[i]['Objname']+"."+Function[i]['Fname']+"(")
+		wf.write("\tEXPECT_EQ("+Fucntion[i]['Objname']+"->"+Function[i]['Fname']+"(")
 	    else:
-		wf.write("\tEXPECT_STREQ("+Fucntion[i]['Objname']+"."+Function[i]['Fname']+"(")
+		wf.write("\tEXPECT_STREQ("+Fucntion[i]['Objname']+"->"+Function[i]['Fname']+"(")
 
 	else:
 	    if Function[i]['Output'][0] == "number":

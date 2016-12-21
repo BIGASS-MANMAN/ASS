@@ -16,10 +16,6 @@ class ASS1Test : public testing::Test {
 	    M1.InsertAlp(AlpList);
 	    M2.InsertAlp(AlpList);
 	    M3.InsertAlp(AlpList);
-
-	    M1.COMMAND("Scenario1.txt");
-	    M2.COMMAND("Scenario2.txt");
-	    M3.COMMAND("scenario3.txt");
 	}
 
 	char* Ing_Traversal(Manager m)
@@ -93,25 +89,7 @@ class ASS1Test : public testing::Test {
 	Manager M2;
 	Manager M3;
 };
-TEST_F(ASS1Test,LOAD_Scenario1){
-	M1.LOAD("words.txt");
-	EXPECT_STREQ(Ing_Traversal(M1),"applebananacarrot");
-	EXPECT_STREQ(Ed_Traversal(M1),"applebananacarrot");
-	EXPECT_STREQ(To_Traversal(M1),"applebananacarrot");
-}
 TEST_F(ASS1Test,COMMAND_Scenario1){
 	M1.COMMAND("/usr/local/Auto_Scoring_System/ASS1/2012722060_김영재/Scenario1.txt");
 	EXPECT_STREQ(Ing_Traversal(M1),"lifecagemiracle");
-}
-TEST_F(ASS1Test,COMMAND_Scenario2){
-	M2.COMMAND("Scenario2.txt");
-	EXPECT_STREQ(Ing_Traversal(M2),"applebananacarrot");
-	EXPECT_STREQ(Ed_Traversal(M2),"applebananacarrot");
-	EXPECT_STREQ(To_Traversal(M2),"applebananacarrot");
-}
-TEST_F(ASS1Test,COMMAND_Scenario3){
-	M3.COMMAND("Scenario3.txt");
-	EXPECT_STREQ(Ing_Traversal(M3),"applebananacarrot");
-	EXPECT_STREQ(Ed_Traversal(M3),"applebananacarrot");
-	EXPECT_STREQ(To_Traversal(M3),"applebananacarrot");
 }

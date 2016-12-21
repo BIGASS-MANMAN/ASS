@@ -1,0 +1,24 @@
+﻿  AlphabetBST.cc
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2372): warning C4996: 'std::copy::_Unchecked_iterators::_Deprecate': Call to 'std::copy' with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2372): note: 'std::copy::_Unchecked_iterators::_Deprecate' 선언을 참조하십시오.
+  c:\users\gihwan\desktop\project_1(ds)\words_memorizing_program(ver.6)\words_memorizing_program\queue_bst.h(63): note: 컴파일 중인 함수 템플릿 인스턴스화 '_OutIt std::copy<T*,T*>(_InIt,_InIt,_OutIt)'에 대한 참조를 확인하십시오.
+          with
+          [
+              _OutIt=AlphabetNode **,
+              T=AlphabetNode *,
+              _InIt=AlphabetNode **
+          ]
+  c:\users\gihwan\desktop\project_1(ds)\words_memorizing_program(ver.6)\words_memorizing_program\queue_bst.h(55): note: 클래스 템플릿 멤버 함수 'void Queue_BST<AlphabetNode *>::Push(const T &)'을(를) 컴파일하고 있습니다.
+          with
+          [
+              T=AlphabetNode *
+          ]
+  c:\users\gihwan\desktop\project_1(ds)\words_memorizing_program(ver.6)\words_memorizing_program\alphabetbst.cc(257): note: 컴파일 중인 함수 템플릿 인스턴스화 'void Queue_BST<AlphabetNode *>::Push(const T &)'에 대한 참조를 확인하십시오.
+          with
+          [
+              T=AlphabetNode *
+          ]
+  c:\users\gihwan\desktop\project_1(ds)\words_memorizing_program(ver.6)\words_memorizing_program\alphabetbst.cc(250): note: 컴파일 중인 클래스 템플릿 인스턴스화 'Queue_BST<AlphabetNode *>'에 대한 참조를 확인하십시오.
+c:\users\gihwan\desktop\project_1(ds)\words_memorizing_program(ver.6)\words_memorizing_program\alphabetbst.cc(88): warning C4715: 'AlphabetBST::Search': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  Words_Memorizing_Program.vcxproj -> C:\Users\GIHWAN\Desktop\Project_1(DS)\Words_Memorizing_Program(ver.6)\Debug\Words_Memorizing_Program.exe
+  Words_Memorizing_Program.vcxproj -> C:\Users\GIHWAN\Desktop\Project_1(DS)\Words_Memorizing_Program(ver.6)\Debug\Words_Memorizing_Program.pdb (Full PDB)

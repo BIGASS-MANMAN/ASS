@@ -64,6 +64,7 @@ for k in range(j,len(lines)):
 wf = open("/usr/local/Auto_Scoring_System/Assignment/"+Ass_name+"/"+Student+"/Death_"+Test+".cc",'w')
 for i in range(0, len(Class)):
     wf.write("#include \"/usr/local/Auto_Scoring_System/Assignment/"+Ass_name+"/"+Student+"/"+Class[i]+".h\"\n")
+wf.write("#include \"../../src/signal.h\"\n");
 
 wf.write("#include \"gtest/gtest.h\"\n\n")
 for i in range(0, len(SetUp)):
@@ -87,7 +88,7 @@ for i in range(0, len(Function)):
 	    INSERTTEMP = Function[i]['Fname']
 	    FunctionNum = 0
 	wf.write("TEST_F("+Test+","+Function[i]['Fname']+"_Death_test_"+Function[i]['InputGRP']+"_%d)\n{\n"%FunctionNum)
-	wf.write("\tASSERT_DEATH("+Function[i]['Objname']+"."+Function[i]['Fname']+ "(")
+	wf.write("\tASSERT_DEATH("+Function[i]['Objname']+"->"+Function[i]['Fname']+ "(")
 	for j in range(0, len(Function[i]['Input'])):
 	    wf.write(Function[i]['Input'][j].split(',')[1])
 	    if j == len(Function[i]['Input'])-1:

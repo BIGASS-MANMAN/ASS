@@ -1,0 +1,3 @@
+life 인생
+job 직업
+earth 지구

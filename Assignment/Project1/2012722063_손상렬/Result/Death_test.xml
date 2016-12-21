@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="14" failures="14" disabled="0" errors="0" timestamp="2016-10-07T23:17:25" time="0.009" name="AllTests">
+  <testsuite name="Project1Test" tests="14" failures="14" disabled="0" errors="0" time="0.009">
+    <testcase name="run_Death_test_TestCase1_0" status="run" time="0.001" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:224&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario1.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:224
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario1.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase2_0" status="run" time="0" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:228&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario2.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:228
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario2.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase3_0" status="run" time="0.001" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:232&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario3.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:232
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario3.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase4_0" status="run" time="0.001" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:236&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario4.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:236
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario4.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase5_0" status="run" time="0.001" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:240&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario5.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:240
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario5.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase6_0" status="run" time="0.001" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:244&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario6.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:244
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario6.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase7_0" status="run" time="0" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:248&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario7.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:248
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario7.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase8_0" status="run" time="0.001" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:252&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario8.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:252
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario8.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase9_0" status="run" time="0" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:256&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario9.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:256
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario9.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase10_0" status="run" time="0.001" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:260&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario10.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:260
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario10.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase11_0" status="run" time="0" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:264&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario11.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:264
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario11.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase12_0" status="run" time="0.001" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:268&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario12.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:268
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario12.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase13_0" status="run" time="0" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:272&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario13.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:272
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario13.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+    <testcase name="run_Death_test_TestCase14_0" status="run" time="0.001" classname="Project1Test">
+      <failure message=".//Death_Project1Test.cc:276&#x0A;Death test: M1.run(&quot;/usr/local/Auto_Scoring_System/info/Project1/Scenario14.txt&quot;)&#x0A;    Result: failed to die.&#x0A; Error msg:&#x0A;[  DEATH   ] " type=""><![CDATA[.//Death_Project1Test.cc:276
+Death test: M1.run("/usr/local/Auto_Scoring_System/info/Project1/Scenario14.txt")
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] ]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

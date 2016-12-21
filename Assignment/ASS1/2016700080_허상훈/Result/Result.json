@@ -1,0 +1,28 @@
+{
+    "assert": [
+        {
+            "Testcase": "Scenario1", 
+            "Testsuite": "LOAD", 
+            "Message": "infinite loop", 
+            "Score": "25"
+        }, 
+        {
+            "Testcase": "Scenario2", 
+            "Testsuite": "COMMAND", 
+            "Message": "infinite loop", 
+            "Score": "50"
+        }, 
+        {
+            "Testcase": "Scenario3", 
+            "Testsuite": "COMMAND", 
+            "Message": "infinite loop", 
+            "Score": "10"
+        }, 
+        {
+            "Testcase": "Scenario1", 
+            "Testsuite": "COMMAND", 
+            "Message": "invalid value", 
+            "Score": "10"
+        }
+    ]
+}

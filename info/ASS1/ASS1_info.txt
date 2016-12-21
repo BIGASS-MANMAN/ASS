@@ -11,10 +11,6 @@ class ASS1Test : public testing::Test {
 	    M1.InsertAlp(AlpList);
 	    M2.InsertAlp(AlpList);
 	    M3.InsertAlp(AlpList);
-
-	    M1.COMMAND("Scenario1.txt");
-	    M2.COMMAND("Scenario2.txt");
-	    M3.COMMAND("scenario3.txt");
 	}
 
 	char* Ing_Traversal(Manager m)
@@ -89,20 +85,20 @@ class ASS1Test : public testing::Test {
 	Manager M3;
 };
 Function	=	
-[{LOAD},{M1},{X},{<string,"words.txt">},{X},{X},{Scenario1}]
-[{LOAD},{M1},{Ing_Traversal},{<Manager,M1>},{string,"applebananacarrot"},{O},{Scenario1}]
-[{LOAD},{M1},{Ed_Traversal},{<Manager,M1>},{string,"applebananacarrot"},{O},{Scenario1}]
-[{LOAD},{M1},{To_Traversal},{<Manager,M1>},{string,"applebananacarrot"},{O},{Scenario1}]
+[{LOAD},{M1},{X},{<string,"words.txt">},{X},{X},{Scenario1},{Manager},{25}]
+[{LOAD},{M1},{Ing_Traversal},{<Manager,M1>},{string,"applebananacarrot"},{O},{Scenario1},{Manager},{25}]
+[{LOAD},{M1},{Ed_Traversal},{<Manager,M1>},{string,"applebananacarrot"},{O},{Scenario1},{Manager},{25}]
+[{LOAD},{M1},{To_Traversal},{<Manager,M1>},{string,"applebananacarrot"},{O},{Scenario1},{Manager},{25}]
 
-[{COMMAND},{M1},{X},{<string,"/usr/local/Auto_Scoring_System/ASS1/2012722060_김영재/Scenario1.txt">},{X},{X},{Scenario1}]
-[{COMMAND},{M1},{Ing_Traversal},{<Manager,M1>},{string,"lifecagemiracle"},{O},{Scenario1}]
+[{COMMAND},{M1},{X},{<string,"/usr/local/Auto_Scoring_System/ASS1/2012722060_김영재/Scenario1.txt">},{X},{X},{Scenario1},{Manager},{10}]
+[{COMMAND},{M1},{Ing_Traversal},{<Manager,M1>},{string,"lifecagemiracle"},{O},{Scenario1},{Manager},{10}]
 
-[{COMMAND},{M2},{X},{<string,"Scenario2.txt">},{X},{X},{Scenario2}]
-[{COMMAND},{M2},{Ing_Traversal},{<Manager,M2>},{string,"applebananacarrot"},{O},{Scenario2}]
-[{COMMAND},{M2},{Ed_Traversal},{<Manager,M2>},{string,"applebananacarrot"},{O},{Scenario2}]
-[{COMMAND},{M2},{To_Traversal},{<Manager,M2>},{string,"applebananacarrot"},{O},{Scenario2}]
+[{COMMAND},{M2},{X},{<string,"Scenario2.txt">},{X},{X},{Scenario2},{Manager},{50}]
+[{COMMAND},{M2},{Ing_Traversal},{<Manager,M2>},{string,"applebananacarrot"},{O},{Scenario2},{Manager},{50}]
+[{COMMAND},{M2},{Ed_Traversal},{<Manager,M2>},{string,"applebananacarrot"},{O},{Scenario2},{Manager},{50}]
+[{COMMAND},{M2},{To_Traversal},{<Manager,M2>},{string,"applebananacarrot"},{O},{Scenario2},{Manager},{50}]
 
-[{COMMAND},{M3},{X},{<string,"Scenario3.txt">},{X},{X},{Scenario3}]
-[{COMMAND},{M3},{Ing_Traversal},{<Manager,M3>},{string,"applebananacarrot"},{O},{Scenario3}]
-[{COMMAND},{M3},{Ed_Traversal},{<Manager,M3>},{string,"applebananacarrot"},{O},{Scenario3}]
-[{COMMAND},{M3},{To_Traversal},{<Manager,M3>},{string,"applebananacarrot"},{O},{Scenario3}]
+[{COMMAND},{M3},{X},{<string,"Scenario3.txt">},{X},{X},{Scenario3},{Manager},{10}]
+[{COMMAND},{M3},{Ing_Traversal},{<Manager,M3>},{string,"applebananacarrot"},{O},{Scenario3},{Manager},{100}]
+[{COMMAND},{M3},{Ed_Traversal},{<Manager,M3>},{string,"applebananacarrot"},{O},{Scenario3},{Manager},{100}]
+[{COMMAND},{M3},{To_Traversal},{<Manager,M3>},{string,"applebananacarrot"},{O},{Scenario3},{Manager},{100}]

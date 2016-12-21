@@ -1,0 +1,5 @@
+ADD
+MOVE 40
+UPDATE course 강좌
+SEARCH course
+EXIT

@@ -1,0 +1,102 @@
+Title	=	BST
+Test	=	BSTTest
+Class	=	Node	BST
+SetUp	=	
+class BSTTest : public testing::Test {
+    protected:
+	virtual void SetUp() {
+	    MyInsert(&Tree1,10);
+	    Tree1.Insert(5);
+	    Tree1.Insert(15);
+	    Tree1.Insert(13);
+
+	    Tree2.Insert(20);
+	    Tree2.Insert(10);
+	    Tree2.Insert(5);
+
+	    Tree3.Insert(20);
+	    Tree3.Insert(27);
+	    Tree3.Insert(35);
+	    Tree3.Insert(24);
+	    Tree3.Insert(28);
+	}
+
+	Node* MyInsert(BST* Tree, int value)
+	{
+	    Node* a = new Node;
+	    Node* pCur = Tree->getRoot();
+
+	    a->setValue(value);
+	    if(Tree->getRoot() == '\0')
+	    {
+		Tree->setRoot(a);
+		return '\0';
+	    }
+
+	    while(1)
+	    {
+		if(pCur->getValue() < a->getValue())
+		{
+		    if(pCur->getRight() == '\0')
+		    {
+			pCur->setRight(a);
+			return '\0';
+		    }
+		    else
+			pCur = pCur->getRight();
+		}
+		else
+		{
+		    if(pCur->getLeft() == '\0')
+		    {
+			pCur->setLeft(a);
+			return '\0';
+		    }
+		    else
+			pCur = pCur->getLeft();
+		}
+	    }
+	}
+
+	char* PRINTNODE(BST Tree)
+	{
+	    char arr[1000]={0,};
+	    return traversal(Tree.getRoot(),arr);
+	}
+
+	char* traversal(Node* pCur, char* arr)
+	{
+	    char buf[100] = {0,};
+	    if(pCur == '\0')
+	    {
+		return arr;
+	    }
+
+	    traversal(pCur->getLeft(), arr);
+
+	    sprintf(buf, "%d", pCur->getValue());
+	    strcat(arr, buf);
+
+	    traversal(pCur->getRight(), arr);
+	    return arr;
+	}
+
+
+	char arr[100];
+	BST Tree1;
+	BST Tree2;
+	BST Tree3;
+};
+Function	=	
+[{Insert},{Tree1},{X},{<number,100>},{X},{X},{GRP1}]
+[{Insert},{Tree1},{PRINTNODE},{<BST,Tree1>},{string,"5101315100"},{O},{GRP1}]
+
+[{Delete},{Tree1},{X},{<number,10>},{X},{X},{Infinite}]
+[{Delete},{Tree1},{PRINTNODE},{<BST,Tree1>},{string,"51315"},{O},{infinite}]
+
+[{Delete},{Tree1},{X},{<number,10>},{X},{X},{GRP2}]
+[{Delete},{Tree1},{PRINTNODE},{<BST,Tree1>},{string,"51315"},{O},{GRP2}]
+[{Delete},{Tree2},{X},{<number,20>},{X},{X},{GRP2}]
+[{Delete},{Tree2},{PRINTNODE},{<BST,Tree2>},{string,"510"},{O},{GRP2}]
+[{Delete},{Tree3},{X},{<number,27>},{X},{X},{GRP2}]
+[{Delete},{Tree3},{PRINTNODE},{<BST,Tree3>},{string,"20242835"},{O},{GRP2}]

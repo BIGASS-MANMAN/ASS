@@ -1,0 +1,30 @@
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+============PRINT============
+activity	활동
+bird	새
+clothes	옷
+different	다른
+earth	지구
+fire	불
+hand	손
+important	중요한
+job	직업
+life	인생
+light	빛
+make	만들다
+name	이름
+problem	문제
+story	이야기
+summer	여름
+trip	여행
+vacation	휴가
+work	일
+=====================
+

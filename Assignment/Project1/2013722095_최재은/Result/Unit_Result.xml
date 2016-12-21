@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="10" failures="3" disabled="0" errors="0" timestamp="2016-10-07T18:54:04" time="0.008" name="AllTests">
+  <testsuite name="Project1Test" tests="10" failures="3" disabled="0" errors="0" time="0.008">
+    <testcase name="run_TestCase1" status="run" time="0" classname="Project1Test" />
+    <testcase name="run_TestCase2" status="run" time="0.001" classname="Project1Test" />
+    <testcase name="run_TestCase3" status="run" time="0.001" classname="Project1Test" />
+    <testcase name="run_TestCase4" status="run" time="0.001" classname="Project1Test" />
+    <testcase name="run_TestCase6" status="run" time="0.001" classname="Project1Test" />
+    <testcase name="run_TestCase7" status="run" time="0.001" classname="Project1Test" />
+    <testcase name="run_TestCase8" status="run" time="0" classname="Project1Test">
+      <failure message=".//Project1Test.cc:248&#x0A;Value of: &quot;plan&quot;&#x0A;Expected: Ed_Traversal(M1)&#x0A;Which is: &quot;problem&quot;" type=""><![CDATA[.//Project1Test.cc:248
+Value of: "plan"
+Expected: Ed_Traversal(M1)
+Which is: "problem"]]></failure>
+    </testcase>
+    <testcase name="run_TestCase9" status="run" time="0.001" classname="Project1Test" />
+    <testcase name="run_TestCase10" status="run" time="0.001" classname="Project1Test">
+      <failure message=".//Project1Test.cc:256&#x0A;Value of: &quot;plan&quot;&#x0A;Expected: Ed_Traversal(M1)&#x0A;Which is: &quot;problem&quot;" type=""><![CDATA[.//Project1Test.cc:256
+Value of: "plan"
+Expected: Ed_Traversal(M1)
+Which is: "problem"]]></failure>
+    </testcase>
+    <testcase name="run_TestCase11" status="run" time="0.001" classname="Project1Test">
+      <failure message=".//Project1Test.cc:260&#x0A;Value of: &quot;activityautumnbirdcleanclothescoursedifferenteachearthenjoyexamplefacefirefunhandimportantjoblearnletterlifelightlistenlotmakemindmovienamenewspaperpaperpartpersonplaceplantproblemsamespacespringstartstorystreetsummertripvacationvisitvolunteerwatchwinwinterwork&quot;&#x0A;Expected: Ing_Traversal_in(M1)&#x0A;Which is: &quot;activityautumnbirdcleanclothescoursedifferenteachearthenjoyexamplefacefirefunhandimportantjoblearnletterlifelightlistenlotmakemindmovienamenewspaperpaperpartpersonplaceplanplantsamespacespringstartstorystreetsummertripvacationvisitvolunteerwatchwinwinterwork&quot;" type=""><![CDATA[.//Project1Test.cc:260
+Value of: "activityautumnbirdcleanclothescoursedifferenteachearthenjoyexamplefacefirefunhandimportantjoblearnletterlifelightlistenlotmakemindmovienamenewspaperpaperpartpersonplaceplantproblemsamespacespringstartstorystreetsummertripvacationvisitvolunteerwatchwinwinterwork"
+Expected: Ing_Traversal_in(M1)
+Which is: "activityautumnbirdcleanclothescoursedifferenteachearthenjoyexamplefacefirefunhandimportantjoblearnletterlifelightlistenlotmakemindmovienamenewspaperpaperpartpersonplaceplanplantsamespacespringstartstorystreetsummertripvacationvisitvolunteerwatchwinwinterwork"]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

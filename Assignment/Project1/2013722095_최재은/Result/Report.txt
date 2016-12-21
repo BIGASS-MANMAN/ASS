@@ -1,0 +1,7 @@
+run	TestCase5	segmentation fault	1
+run	TestCase12	infinite loop	1
+run	TestCase13	segmentation fault	1
+run	TestCase14	segmentation fault	1
+run	TestCase8	invalid value	1
+run	TestCase10	invalid value	1
+run	TestCase11	invalid value	1

@@ -1,0 +1,104 @@
+Title	=	ASS1
+Test	=	ASS1Test
+Class	=	ALP_BST	Alphabet	CircularQueue	Manager	Queue	WORD_BST	Word
+SetUp	=	
+class ASS1Test : public testing::Test {
+    protected:
+	virtual void SetUp() {
+
+	    char AlpList[] = "qazplmwsxoknedcijbrfvtguhy";
+
+	    M1.InsertAlp(AlpList);
+	    M2.InsertAlp(AlpList);
+	    M3.InsertAlp(AlpList);
+	}
+
+	char* Ing_Traversal(Manager m)
+	{
+	    char arr[8192]={0,};
+	    return Ing_Sub_Traversal(m.ALPTREE->getRoot(),arr);
+	}
+
+	char* Ed_Traversal(Manager m)
+	{
+	    char arr[8192]={0,};
+
+	    if(m.Q->getHead() == NULL)
+		return NULL;
+	    else
+	    {
+		Word* pCur = m.Q->getHead();
+		while(pCur)
+		{
+		    strcat(arr,pCur->getWord());
+		    pCur = pCur->getNext();
+		}
+	    }
+	    return arr;
+	}
+
+	char* To_Traversal(Manager m)
+	{
+	    char arr[8192]={0,};
+
+	    if(m.CQ->getHead() == NULL)
+		return NULL;
+	    else
+	    {
+		Word* pCur = m.CQ->getHead();
+	        while(1)
+		{
+		    strcat(arr,pCur->getWord());
+		    if(pCur->getNext() == m.CQ->getHead())
+			break;
+		    pCur = pCur->getNext();
+		}
+	    }
+	    return arr;
+	}
+
+	char* Ing_Sub_Traversal(Alphabet* Node, char* arr)
+	{
+	    WORD_BST* WB;
+
+	    if(Node == NULL)
+		return arr;
+
+	    WB = Node->getBST();
+	    Word_Traversal(WB->getRoot(),arr);
+	    Ing_Sub_Traversal(Node->getLeft(), arr);
+	    Ing_Sub_Traversal(Node->getRight(), arr);
+	}
+
+	char* Word_Traversal(Word* Node, char* arr)
+	{
+	    if(Node == NULL)
+		return arr;
+
+	    strcat(arr,Node->getWord());
+	    Word_Traversal(Node->getLeft(),arr);
+	    Word_Traversal(Node->getRight(),arr);
+	}
+
+	Manager M1;
+	Manager M2;
+	Manager M3;
+};
+Function	=	
+[{LOAD},{M1},{X},{<string,"words.txt">},{X},{X},{Scenario1},{Manager},{10}]
+[{LOAD},{M1},{Ing_Traversal},{<Manager,M1>},{string,"applebananacarrot"},{O},{Scenario1},{Manager},{10}]
+[{LOAD},{M1},{Ed_Traversal},{<Manager,M1>},{string,"applebananacarrot"},{O},{Scenario1},{Manager},{10}]
+[{LOAD},{M1},{To_Traversal},{<Manager,M1>},{string,"applebananacarrot"},{O},{Scenario1},{Manager},{10}]
+
+[{COMMAND},{M1},{X},{<string,"/usr/local/Auto_Scoring_System/ASS1/2012722060_김영재/Scenario1.txt">},{X},{X},{Scenario1},{Manager},{10}]
+[{COMMAND},{M1},{Ing_Traversal},{<Manager,M1>},{string,"lifecagemiracle"},{O},{Scenario1},{Manager},{10}]
+
+[{COMMAND},{M2},{X},{<string,"Scenario2.txt">},{X},{X},{Scenario2},{Manager},{10}]
+[{COMMAND},{M2},{Ing_Traversal},{<Manager,M2>},{string,"applebananacarrot"},{O},{Scenario2},{Manager},{10}]
+[{COMMAND},{M2},{Ed_Traversal},{<Manager,M2>},{string,"applebananacarrot"},{O},{Scenario2},{Manager},{10}]
+[{COMMAND},{M2},{To_Traversal},{<Manager,M2>},{string,"applebananacarrot"},{O},{Scenario2},{Manager},{10}]
+
+[{COMMAND},{M3},{X},{<string,"Scenario3.txt">},{X},{X},{Scenario3},{Manager},{10}]
+[{COMMAND},{M3},{Ing_Traversal},{<Manager,M3>},{string,"applebananacarrot"},{O},{Scenario3},{Manager},{10}]
+[{COMMAND},{M3},{Ed_Traversal},{<Manager,M3>},{string,"applebananacarrot"},{O},{Scenario3},{Manager},{10}]
+[{COMMAND},{M3},{To_Traversal},{<Manager,M3>},{string,"applebananacarrot"},{O},{Scenario3},{Manager},{10}]

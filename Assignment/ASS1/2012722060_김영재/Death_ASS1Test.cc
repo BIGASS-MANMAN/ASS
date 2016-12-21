@@ -16,10 +16,6 @@ class ASS1Test : public testing::Test {
 	    M1.InsertAlp(AlpList);
 	    M2.InsertAlp(AlpList);
 	    M3.InsertAlp(AlpList);
-
-	    M1.COMMAND("Scenario1.txt");
-	    M2.COMMAND("Scenario2.txt");
-	    M3.COMMAND("scenario3.txt");
 	}
 
 	char* Ing_Traversal(Manager m)

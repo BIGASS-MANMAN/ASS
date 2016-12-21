@@ -1,0 +1,263 @@
+======== ADD ========
+Success
+=====================
+
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+======== Error ========
+300
+=====================
+
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+============PRINT============
+activity	활동
+bird	새
+clothes	옷
+different	다른
+earth	지구
+fire	불
+hand	손
+important	중요한
+job	직업
+life	인생
+light	빛
+make	만들다
+name	이름
+problem	문제
+story	이야기
+summer	여름
+trip	여행
+vacation	휴가
+work	일
+=====================
+
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+============PRINT============
+problem	문제
+hand	손
+different	다른
+bird	새
+activity	활동
+clothes	옷
+fire	불
+earth	지구
+life	인생
+light	빛
+job	직업
+important	중요한
+name	이름
+make	만들다
+trip	여행
+story	이야기
+summer	여름
+vacation	휴가
+work	일
+=====================
+
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+============PRINT============
+activity	활동
+clothes	옷
+bird	새
+earth	지구
+fire	불
+different	다른
+important	중요한
+job	직업
+make	만들다
+name	이름
+light	빛
+life	인생
+hand	손
+summer	여름
+story	이야기
+work	일
+vacation	휴가
+trip	여행
+problem	문제
+=====================
+
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+============PRINT============
+problem	문제
+hand	손
+different	다른
+life	인생
+light	빛
+trip	여행
+bird	새
+fire	불
+job	직업
+name	이름
+vacation	휴가
+activity	활동
+clothes	옷
+earth	지구
+important	중요한
+make	만들다
+story	이야기
+summer	여름
+work	일
+=====================
+
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+======== Error ========
+500
+=====================
+
+======== Error ========
+600
+=====================
+
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+======== Error ========
+500
+=====================
+
+======== SAVE ========
+Success
+=====================
+
+======== Error ========
+100
+=====================
+
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+============PRINT============
+activity	활동
+clothes	옷
+different	다른
+earth	지구
+fire	불
+hand	손
+important	중요한
+job	직업
+life	인생
+make	만들다
+name	이름
+problem	문제
+story	이야기
+work	일
+=====================
+
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+============PRINT============
+problem	문제
+hand	손
+different	다른
+activity	활동
+clothes	옷
+fire	불
+earth	지구
+life	인생
+job	직업
+important	중요한
+name	이름
+make	만들다
+story	이야기
+work	일
+=====================
+
+======== ADD ========
+Success
+=====================
+
+======== MOVE ========
+Success
+=====================
+
+============PRINT============
+activity	활동
+clothes	옷
+earth	지구
+fire	불
+different	다른
+important	중요한
+job	직업
+make	만들다
+name	이름
+life	인생
+hand	손
+story	이야기
+work	일
+problem	문제
+=====================
+

@@ -1,0 +1,28 @@
+{
+    "assert": [
+        {
+            "Testcase": "TestCase1", 
+            "Testsuite": "run", 
+            "Message": "invalid value", 
+            "Score": "1"
+        }, 
+        {
+            "Testcase": "TestCase4", 
+            "Testsuite": "run", 
+            "Message": "invalid value", 
+            "Score": "1"
+        }, 
+        {
+            "Testcase": "TestCase5", 
+            "Testsuite": "run", 
+            "Message": "invalid value", 
+            "Score": "1"
+        }, 
+        {
+            "Testcase": "TestCase11", 
+            "Testsuite": "run", 
+            "Message": "invalid value", 
+            "Score": "1"
+        }
+    ]
+}
